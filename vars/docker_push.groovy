@@ -3,4 +3,4 @@
     sh "docker login -u ${dockerHubUser} -p ${dockerHubPass}"
   }
   sh "docker push ${dockerHubuser}/${Project}:${ImageTag}"
-}
+
