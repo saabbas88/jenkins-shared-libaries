@@ -1,6 +1,6 @@
- def call(String Project, String ImageTag, String dockerhubuser){
+ def call(String Project, String ImageTag, String dockerHubUser){
   wtihCredentials([usernamePassword(credentialsId: 'docker-cred', passwordVariable: 'dockerHubPass',usernameVariables: 'dockerHubUser')])
-    sh "docker login -u ${dockerhubuser} -p ${dockerhubpass}"
+    sh "docker login -u ${dockerHubUser} -p ${dockerHubPass}"
   }
-  sh "docker push ${dockerhubuser}/${Project}:${ImageTag}"
+  sh "docker push ${dockerHubuser}/${Project}:${ImageTag}"
 
